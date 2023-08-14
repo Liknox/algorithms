@@ -1,5 +1,3 @@
-// Поиск в ширину в графе
-
 const graph = {}
 graph.a = ["b", "c"]
 graph.b = ["f"]
@@ -13,12 +11,11 @@ function breadthSearch(graph, start, end) {
 	queue.push(start)
 	while (queue.length > 0) {
 		const current = queue.shift()
-		if (!graph[current]) {
-			graph[current] = []
-		}
+		if (!graph[current]) graph[current] = []
+
 		if (graph[current].includes(end)) {
 			return true
-		} else {
+		} else {w
 			queue = [...queue, ...graph[current]]
 		}
 	}

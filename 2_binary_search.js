@@ -1,36 +1,34 @@
-const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 999]
-let count = 0
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-function binarySearch(array, item) {
-	let start = 0
-	let end = array.length
-	let middle
-	let found = false
-	let position = -1
+// function binarySearch(array, item) {
+// 	let start = 0
+// 	let end = array.length
+// 	let middle
+// 	let found = false
+// 	let position = -1
 
-	while (!found && start <= end) {
-		count += 1
-		middle = Math.floor((start + end) / 2)
-		if (array[middle] === item) {
-			found = true
-			position = middle
-			return position
-		}
-		if (item < array[middle]) {
-			end = middle - 1
-		} else {
-			start = middle + 1
-		}
-	}
+// 	while (!found && start <= end) {
+// 		middle = Math.floor((start + end) / 2)
+// 		if (array[middle] === item) {
+// 			found = true
+// 			position = middle
+// 			return position
+// 		}
+// 		if (item < array[middle]) {
+// 			end = middle - 1
+// 		} else {
+// 			start = middle + 1
+// 		}
+// 	}
 
-	return position
-}
+// 	return position
+// }
 
-console.log(binarySearch(array, 999))
+// console.log(binarySearch(array, 999))
 
 function recursiveBinarySearch(array, item, start, end) {
 	let middle = Math.floor((start + end) / 2)
-	count += 1
+   console.log(middle)
 	if (item === array[middle]) {
 		return middle
 	}
@@ -41,5 +39,4 @@ function recursiveBinarySearch(array, item, start, end) {
 	}
 }
 
-console.log(recursiveBinarySearch(array, 0, 0, array.length))
-console.log(count)
+console.log(recursiveBinarySearch(array, 4, 0, array.length))

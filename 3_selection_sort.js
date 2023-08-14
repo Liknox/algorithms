@@ -18,5 +18,3 @@ function selectionSort(array) {
 }
 
 console.log(selectionSort(arr))
-console.log(arr.length) // O(n*n)
-console.log("count = ", count)

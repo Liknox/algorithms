@@ -68,4 +68,4 @@ const iteration = tree => {
 }
 
 console.log(iteration(tree))
-// console.log(recursive(tree))
+console.log(recursive(tree))
